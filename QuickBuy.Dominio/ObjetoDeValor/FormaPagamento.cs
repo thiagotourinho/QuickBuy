@@ -23,7 +23,7 @@ namespace QuickBuy.Dominio.ObjetoDeValor
         {
 
             get { return Id == (int)TipoFormaPagamentoEnum.CartaoCredito; }
-
+        }
               public bool EhDeposito
         {
 
