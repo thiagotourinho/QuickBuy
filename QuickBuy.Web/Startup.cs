@@ -27,11 +27,10 @@ namespace QuickBuy.Web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            var connectionString = Configuration.GetConnectionString("QuickBuyDB");
+            var connectionString = "server = localhost; uid = root; pwd = Daftpunk!2019; database = QuickBuyDB";// Configuration.GetConnectionString("QuickBuyDB");
 
             services.AddDbContext<QuickBuyContexto>(option =>
                                                     option.UseLazyLoadingProxies()
